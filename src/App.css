@@ -1,38 +1,109 @@
-.App {
+/* src/App.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: url('') no-repeat center center/cover;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav__links {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav__links.active {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust this to match your nav bar height */
+  right: 0;
+  background-color: white; /* Change color as needed */
+  width: 100%;
+}
+
+.nav__links li {
+  margin: 10px 0; /* Adjust spacing for vertical menu */
+}
+
+.nav__btn {
+  background-color: #f8c93c;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.section__container {
+  padding: 40px;
+}
+
+/* Booking Section */
+.booking__container {
+  background-color: #f8f8f8;
+}
+
+/* About Section */
+.about__container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about__image img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.about__content {
+  margin-left: 20px;
+}
+
+/* Rooms Section */
+.room__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.room__card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.room__card__image img {
+  width: 100%;
+}
+
+.room__card__details {
+  padding: 10px;
+}
+
+/* Services Section */
+.service {
+  background-color: #f8f8f8;
+}
+
+/* Banner Section */
+.banner {
+  background: #f8c93c;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .room__grid {
+      grid-template-columns: 1fr;
   }
 }
